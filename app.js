@@ -8,6 +8,7 @@ const mongodb = require('mongodb');
 const { check, validationResult } = require('express-validator');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const { getMaxListeners } = require('process');
 
 
 let app = express();
@@ -127,7 +128,7 @@ app.post('/submit', upload, (req, res) => {
         //This is customer mailing.
         let infoCust = await transporter.sendMail({
             from: 'shayan.devtest@gmail.com', // sender address
-            to: req.body.email, // list of receivers
+            to: 'quransociety2013@getMaxListeners.com', // list of receivers
             subject: 'New Student Registration', // Subject line
             //text: 'Hello world?', // plain text body
             html: form_email, // html body
