@@ -128,7 +128,7 @@ app.post('/submit', upload, (req, res) => {
         //This is customer mailing.
         let infoCust = await transporter.sendMail({
             from: 'shayan.devtest@gmail.com', // sender address
-            to: 'quransociety2013@getMaxListeners.com', // list of receivers
+            to: 'quransociety2013@gmail.com', // list of receivers
             subject: 'New Student Registration', // Subject line
             //text: 'Hello world?', // plain text body
             html: form_email, // html body
