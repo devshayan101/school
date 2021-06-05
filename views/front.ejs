@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Front</title>
+</head>
+
+<body>
+    <center>
+        <button class="btn" id="rzp-button1">
+            Pay ₹50
+        </button>
+
+    </center>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    axios.post('/orders').then((info) => {
+        console.log(info)
+        console.log(info.data.id)
+
+        var options = {
+            "key": "rzp_test_WUWrYpBBGIb8f7",
+            "amount": "5000",
+            "currency": "INR",
+            "name": "Jamia Makkia Khazainul Irfan",
+            "description": "Form Fees",
+            "image": "https://example.com/your_logo",
+            "order_id": info.data.id,
+            "callback_url": "/admissions",
+            "theme": { "color": "#0ada9bef" }
+        };
+
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = function (e) {
+            rzp1.open(); e.preventDefault();
+        }
+    })
+</script>
+
+</html>

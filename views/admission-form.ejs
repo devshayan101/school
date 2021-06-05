@@ -1,0 +1,206 @@
+<!-- start banner Area -->
+<section class="banner-area relative about-banner" id="home">
+	<div class="overlay overlay-bg"></div>
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center">
+			<div class="about-content col-lg-12">
+				<h2 class="text-white">
+					Admission Form
+				</h2>
+				<p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
+					<a href="event-details.html"> Admission Form</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start Admission-Form Area -->
+<section class="event-details-area section-gap">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-lg-8 event-details-left">
+
+				<div class="details-content">
+
+					<div class="col-lg-12 myform">
+						<h3 class="mb-30">Admission Form</h3>
+						<form action='/submit-error' method="POST" enctype="multipart/form-data">
+
+							<button class="btn btn-primary" id="rzp-button1">Pay Rs.50</button>
+							<p><b>Note: You must pay the form fee Rs.50 before filling the form.</b></p>
+
+							<div class="mt-10">
+								<input type="text" name="student_name" placeholder="Student's Name"
+									onfocus=" this.placeholder=''" onblur=" this.placeholder='Student Name'"
+									class=" single-input-primary">
+							</div>
+							<div class="mt-10">
+								<input type="text" name="father_name" placeholder="Fathers Name"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Fathers Name'"
+									class="single-input-primary">
+							</div>
+							<div class="mt-10">
+								<input type="number" name="class" placeholder="Class" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Class'" class="single-input-primary">
+							</div>
+							<div class="input-group-icon mt-10">
+								<input type="text" name="address"
+									placeholder="Full-Address with district, state and pincode"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full-Address'"
+									class="single-input-primary">
+							</div>
+							<div class="mt-10">
+								<label for="dob" style="padding-left:1rem;">Date of Birth</label>
+								<input type="date" name="dob" placeholder="Date of Birth"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date of Birth'"
+									class="single-input-primary">
+							</div>
+							<div class="mt-10">
+								<input type="number" name="phone" placeholder="Mobile Number"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'"
+									class="single-input-primary">
+							</div>
+							<div class="mt-10">
+								<input type="email" name="email" placeholder="Email" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Email'" class="single-input-primary">
+							</div>
+							<div class="mt-10">
+								<input type="tel" name="phone" placeholder="Aadhaar number"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Aadhaar number'"
+									class="single-input-primary">
+							</div>
+
+							<div class="mt-10">
+								<label for="Photo" style="padding-left:1rem;">Photo</label>
+								<input type="file" accept=".jpg, .jpeg, .png" name="Photo" class="single-input-primary"
+									required>
+							</div>
+
+
+
+
+
+							<hr>
+							<label for="">PARENTS DETAILS</label>
+							<div class="mt-10">
+								<input type="text" name="father_name_p" placeholder="Fathers Name/ Guardians Name"
+									onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Fathers Name/ Guardians Name'"
+									class="single-input-primary">
+							</div>
+
+							<div class="mt-10">
+								<input type="number" name="phone_p" placeholder="Mobile Number"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'"
+									class="single-input-primary">
+							</div>
+							<div class="mt-10" style="padding-top:1rem; ">
+								<center>
+									<button type="submit" class="genric-btn info circle e-large"
+										style="font-size:0.9rem;">Submit</button>
+								</center>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+			<div class="col-lg-4 event-details-right">
+				<div class="single-event-details">
+					<h4>Admission Form - Offline</h4>
+					<ul class="mt-10">
+						<li class="justify-content-between d-flex">
+							<span>Admission Form</span>
+							<a href="./img/download/admission_form.pdf" download>Download Form</a>
+						</li>
+						<li class="justify-content-between d-flex">
+							<span>Last date</span>
+							<span>18th April, 2018</span>
+						</li>
+
+					</ul>
+				</div>
+				<div class="single-event-details">
+					<h4>Venue</h4>
+					<ul class="mt-10">
+						<li class="justify-content-between d-flex">
+							<span>Place</span>
+							<span>Main Hallroom</span>
+						</li>
+						<li class="justify-content-between d-flex">
+							<span>Street</span>
+							<span>Bullevard Street</span>
+						</li>
+						<li class="justify-content-between d-flex">
+							<span>City</span>
+							<span>Santa Monica</span>
+						</li>
+					</ul>
+				</div>
+				<div class="single-event-details">
+					<h4>Organiser</h4>
+					<ul class="mt-10">
+						<li class="justify-content-between d-flex">
+							<span>Company</span>
+							<span>Colorlib</span>
+						</li>
+						<li class="justify-content-between d-flex">
+							<span>Street</span>
+							<span>Bullevard Street</span>
+						</li>
+						<li class="justify-content-between d-flex">
+							<span>City</span>
+							<span>Santa Monica</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+
+
+
+
+	axios.post('/orders').then((info) => {
+		console.log(info)
+		console.log(info.data.id)
+
+		var options = {
+			"key": "rzp_test_WUWrYpBBGIb8f7",
+			"amount": "5000",
+			"currency": "INR",
+			"name": "Jamia Makkia Khazainul Irfan",
+			"description": "Form Fees",
+			"image": "https://example.com/your_logo",
+			"order_id": info.data.id,
+			"callback_url": "/admissions",
+			"theme": { "color": "#0ada9bef" }
+		};
+
+		var rzp1 = new Razorpay(options);
+
+		document.getElementById('rzp-button1').onclick = function (e) {
+
+			rzp1.open();
+			e.preventDefault();
+
+		}
+	})
+</script>
+<!-- End Admission-Form Area -->
