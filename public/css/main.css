@@ -2490,10 +2490,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area .overlay-bg {
-    /* background-color: rgba(15, 19, 31, 0.8); */
-    /* background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%); */
-    /* background-image: radial-gradient(circle at 50.1% 37.3%, rgb(92, 213, 249) 0%, rgb(123, 243, 248) 90.1%); */
-    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    
+    background-color: rgba(15, 19, 31, 0.8);
 }
 
 @media (max-width: 767px) {
@@ -5184,48 +5182,55 @@ grid-row-gap: 2rem; */
     background-image: linear-gradient(45deg, rgb(133, 255, 189) 0%, rgb(255, 251, 125) 100%);
   }
    */
+/* APPLY_NOW_BUTTON */
 
-  @media(max-width:959px){
-    .admission {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%)}
-    .admission {
-       /* margin: 10px;
-       padding: 15px 45px; */
-       text-align: center;
-       text-transform: uppercase;
-       transition: 0.5s;
-       background-size: 200% auto;
-       color: white;            
-       box-shadow: 0 0 20px #eee;
-       border-radius: 10px;
-       display: block;
-     }
-  
-     .admission:hover {
-       background-position: right center; /* change the direction of the change here */
-       color: #fff !important;
-       /* text-shadow: 1px 0px 3px rgb(184, 183, 183); */
-       text-decoration: none;
-     }
+
+.applynow {background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%)}
+.applynow {
+   /* margin: 10px;
+   padding: 15px 45px; */
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   /* box-shadow: 0 0 10px #eee; */
+   border-radius: 10px;
+   display: block;
+ }
+
+ .applynow:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+
+ .admission {background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%)}
+ .admission {
+    /* margin: 10px;
+    padding: 15px 45px; */
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    /* box-shadow: 0 0 20px #eee; */
+    border-radius: 10px;
+    display: block;
   }
-  @media(min-width:960px){
-    .admission {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%)}
-    .admission {
-       /* margin: 10px;
-       padding: 15px 45px; */
-       text-align: center;
-       text-transform: uppercase;
-       transition: 0.5s;
-       background-size: 200% auto;
-       color: white;            
-       box-shadow: 0 0 20px #eee;
-       border-radius: 10px;
-       display: block;
-     }
-  
-     .admission:hover {
-       background-position: right center; /* change the direction of the change here */
-       color: #fff !important;
-       /* text-shadow: 1px 0px 3px rgb(184, 183, 183); */
-       text-decoration: none;
-     }
+
+  .admission:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  .bg-carousel{
+      background-color: #38504A;
+  }
+
+  #nav-menu-container{
+      width:100vw;
   }
