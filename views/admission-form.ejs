@@ -37,24 +37,26 @@
 											<use xlink:href="#check-circle-fill" />
 										</svg>
 										<div>
-											Payment Successul of Rs.50.
+											&nbsp;Payment Successul of Rs.50.
 										</div>
 									</div>
 
 									<% } %>
 
 										<div class="mt-10">
-											<input type="text" name="student_name" placeholder="Student's Name"
-												onfocus=" this.placeholder=''" onblur=" this.placeholder='Student Name'"
-												class=" single-input-primary">
+											<hr>
+											<h4>Student's Details</h4>
+											<input type="text" name="first_name" placeholder="First Name"
+												onfocus=" this.placeholder=''" onblur=" this.placeholder='First Name'"
+												class=" single-input-primary" id="first_name">
 										</div>
 										<div class="mt-10">
-											<input type="text" name="father_name" placeholder="Fathers Name"
-												onfocus="this.placeholder = ''"
-												onblur="this.placeholder = 'Fathers Name'" class="single-input-primary">
+											<input type="text" name="last_name" placeholder="Last Name"
+												onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'"
+												class="single-input-primary">
 										</div>
 										<div class="mt-10">
-											<input type="number" name="class" placeholder="Class"
+											<input type="text" name="class" placeholder="Class"
 												onfocus="this.placeholder = ''" onblur="this.placeholder = 'Class'"
 												class="single-input-primary">
 										</div>
@@ -83,31 +85,38 @@
 												class="single-input-primary">
 										</div>
 										<div class="mt-10">
-											<input type="tel" name="phone" placeholder="Aadhaar number"
+											<input type="tel" name="aadhaar" placeholder="Aadhaar number"
 												onfocus="this.placeholder = ''"
 												onblur="this.placeholder = 'Aadhaar number'"
 												class="single-input-primary">
 										</div>
 
 										<div class="mt-10">
-											<label for="Photo" style="padding-left:1rem;">Photo</label>
-											<input type="file" accept=".jpg, .jpeg, .png" name="Photo"
+											<label for="photo" style="padding-left:1rem;">Photo</label>
+											<input type="file" accept=".jpg, .jpeg, .png" name="photo"
 												class="single-input-primary" required>
 										</div>
 
 
 										<hr>
-										<label for="">PARENTS DETAILS</label>
+										<h4>PARENTS DETAILS</h4>
 										<div class="mt-10">
-											<input type="text" name="father_name_p"
-												placeholder="Fathers Name/ Guardians Name"
+											<input type="text" name="guardian_name_first"
+												placeholder="Fathers Name/ Guardians Name [First Name]"
 												onfocus="this.placeholder = ''"
 												onblur="this.placeholder = 'Fathers Name/ Guardians Name'"
 												class="single-input-primary">
 										</div>
+										<div class="mt-10">
+											<input type="text" name="guardian_name_last"
+												placeholder="Fathers Name/ Guardians Name"
+												onfocus="this.placeholder = ''"
+												onblur="this.placeholder = 'Fathers Name/ Guardians Name [Last Name]'"
+												class="single-input-primary">
+										</div>
 
 										<div class="mt-10">
-											<input type="tel" name="phone_p" placeholder="Mobile Number"
+											<input type="tel" name="phone_g" placeholder="Mobile Number"
 												onfocus="this.placeholder = ''"
 												onblur="this.placeholder = 'Mobile Number'"
 												class="single-input-primary">
@@ -185,32 +194,34 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-<script>
+<% if(_id===null){ %>
+	<script>
 
-	axios.post('/orders').then((info) => {
-		console.log(info)
-		console.log(info.data.id)
+		axios.post('/orders').then((info) => {
+			console.log(info)
+			console.log(info.data.id)
 
-		var options = {
-			"key": "rzp_test_WUWrYpBBGIb8f7",
-			"amount": "5000",
-			"currency": "INR",
-			"name": "Jamia Makkia Khazainul Irfan",
-			"description": "Form Fees",
-			"image": "https://example.com/your_logo",
-			"order_id": info.data.id,
-			"callback_url": "/admissions",
-			"theme": { "color": "#0ada9bef" }
-		};
+			var options = {
+				"key": "rzp_test_WUWrYpBBGIb8f7",
+				"amount": "5000",
+				"currency": "INR",
+				"name": "Jamia Makkia Khazainul Irfan",
+				"description": "Form Fees",
+				"image": "https://example.com/your_logo",
+				"order_id": info.data.id,
+				"callback_url": "/admissions",
+				"theme": { "color": "#0ada9bef" }
+			};
 
-		var rzp1 = new Razorpay(options);
+			var rzp1 = new Razorpay(options);
 
-		document.getElementById('rzp-button1').onclick = function (e) {
+			document.getElementById('rzp-button1').onclick = function (e) {
 
-			rzp1.open();
-			e.preventDefault();
+				rzp1.open();
+				e.preventDefault();
 
-		}
-	})
-</script>
-<!-- End Admission-Form Area -->
+			}
+		})
+	</script>
+	<% } %>
+		<!-- End Admission-Form Area -->

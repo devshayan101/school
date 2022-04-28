@@ -9,7 +9,12 @@
                 <%= messege_body %>
             </p>
             <hr>
-            <a href="/admission-form" class="btn btn-primary">Go Back</a>
+            <% if(title==='Form Submited' ){ %>
+                <a href="/" class="btn btn-primary">Go Back</a>
+                <% } else{ %>
+                    <a href="/admission-form" class="btn btn-primary">Go Back</a>
+                    <% } %>
         </div>
+
     </div>
 </section>
