@@ -5234,3 +5234,6 @@ grid-row-gap: 2rem; */
   #nav-menu-container{
       width:100vw;
   }
+.main-menu{
+    background: #05fdfd38;
+}
