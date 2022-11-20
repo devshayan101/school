@@ -2069,9 +2069,8 @@ h6 {
 }
 
 .main-menu {
-    padding-bottom: 20px;
-    padding-top: 20px;
     border-bottom: 1px solid #39353e;
+    padding: 15px 30px 15px 30px;
 }
 
 #header {

@@ -97,6 +97,7 @@ const upload = multer({
 //put validator here
 
 //put csrf protection
+//------------------------------------------------------------------------------------------------
 const submitPostPayment = (req, res) => {
 
 
@@ -200,7 +201,7 @@ const submitPostPayment = (req, res) => {
 
                     // create reusable transporter object using the default SMTP transport
                     let transporter = nodemailer.createTransport({
-                        host: 'smtp.sendgrid.net',
+                        host: 'in-v3.mailjet.com',//'smtp.sendgrid.net',
                         port: 587,
                         secure: false, // true for 465, false for other ports
                         auth: {
@@ -247,6 +248,19 @@ const submitPostPayment = (req, res) => {
         })
 }
 
+
+const newsubmitPostPayment = (req, res) => {
+    //todo
+    //1.validation
+    //2.verify payment
+    //3.update formdata
+    //4.email setup - without photoupload
+
+    //1.form validation with joi
+
+    
+    
+}
 
 module.exports = {
     orders,
