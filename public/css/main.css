@@ -5206,26 +5206,85 @@ grid-row-gap: 2rem; */
 
 
 
- .admission {background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%)}
+ /* .admission {background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%)}
  .admission {
-    /* margin: 10px;
-    padding: 15px 45px; */
+    
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;            
-    /* box-shadow: 0 0 20px #eee; */
+    
     border-radius: 10px;
     display: block;
   }
 
   .admission:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
     color: #fff;
     text-decoration: none;
+  } */
+  .admission {
+      
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      animation: glowing 20s linear infinite;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
   }
- 
+  
+  .admission:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left:-2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      opacity: 0.8;
+    animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+              border-radius: 10px;           
+  }
+  
+  .admission:active {
+      color: #000
+  }
+  
+  .admission:active:after {
+      background: transparent;
+  }
+  
+  .admission:hover:before {
+      opacity: 1;
+  }
+  
+  .admission:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+      0% { background-position: 0 0; }
+      50% { background-position: 400% 0; }
+      100% { background-position: 0 0; }
+  }
   .bg-carousel{
       background-color: #38504A;
   }
