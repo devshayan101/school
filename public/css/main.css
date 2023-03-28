@@ -5204,26 +5204,6 @@ grid-row-gap: 2rem; */
    text-decoration: none;
  }
 
-
-
- /* .admission {background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%)}
- .admission {
-    
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    
-    border-radius: 10px;
-    display: block;
-  }
-
-  .admission:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
-  } */
   .admission {
       
       border: none;
